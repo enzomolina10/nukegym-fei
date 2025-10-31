@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions name="GymService"
+  targetNamespace="http://localhost:8001/soap"
+  xmlns:tns="http://localhost:8001/soap"
+  xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"
+  xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+  xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+
+  <message name="ListAvailableClassesRequest"/>
+  <message name="ListAvailableClassesResponse">
+    <part name="classes" element="tns:ClassesResponse"/>
+  </message>
+
+  <types>
+    <xsd:schema targetNamespace="http://localhost:8001/soap">
+      <xsd:element name="ClassesResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="class" maxOccurs="unbounded">
+              <xsd:complexType>
+                <xsd:sequence>
+                  <xsd:element name="id" type="xsd:int"/>
+                  <xsd:element name="name" type="xsd:string"/>
+                  <xsd:element name="schedule" type="xsd:string"/>
+                  <xsd:element name="spots" type="xsd:int"/>
+                </xsd:sequence>
+              </xsd:complexType>
+            </xsd:element>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+    </xsd:schema>
+  </types>
+
+  <portType name="GymServicePortType">
+    <operation name="ListAvailableClasses">
+      <input message="tns:ListAvailableClassesRequest"/>
+      <output message="tns:ListAvailableClassesResponse"/>
+    </operation>
+  </portType>
+
+  <binding name="GymServiceBinding" type="tns:GymServicePortType">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <operation name="ListAvailableClasses">
+      <soap:operation soapAction="http://localhost:8001/soap#ListAvailableClasses"/>
+      <input><soap:body use="literal"/></input>
+      <output><soap:body use="literal"/></output>
+    </operation>
+  </binding>
+
+  <service name="GymService">
+    <port name="GymServicePort" binding="tns:GymServiceBinding">
+      <soap:address location="http://localhost:8001/soap"/>
+    </port>
+  </service>
+</definitions>

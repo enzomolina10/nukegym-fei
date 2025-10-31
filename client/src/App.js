@@ -17,6 +17,8 @@ import Routine from "./pages/Routine";
 import Notifications from "./pages/Notifications";
 import News from "./pages/News";
 
+import ClasesSoap from "./pages/ClasesSoap";
+
 const Login = lazy(() => import("./pages/Login"));
 const Signup = lazy(() => import("./pages/Signup"));
 const NotFound = lazy(() => import("./pages/NotFound"));
@@ -40,6 +42,7 @@ const App = () => {
               <Route path="/routine" element={<Routine />} />
               <Route path="/classes" element={<Classes />} />
               <Route path="/news" element={<News />} />
+              <Route path="/clasesSoap" element={<ClasesSoap />} />
               <Route
                 path="/trainers"
                 element={
