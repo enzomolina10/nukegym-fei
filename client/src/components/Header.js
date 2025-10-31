@@ -83,13 +83,11 @@ const Header = () => {
           </Link>
         </li>
 
-        <li>  
+        <li>
           <Link
             to="/news"
             className={`font-medium hover:text-orange-500 transition-colors ${
-              location.pathname === "/news"
-              ? "text-orange-500 underline"
-              : ""
+              location.pathname === "/news" ? "text-orange-500 underline" : ""
             }`}
           >
             Noticias Fit
@@ -117,7 +115,19 @@ const Header = () => {
                 : ""
             }`}
           >
-            Rutina
+            Ejercicios
+          </Link>
+        </li>
+        <li>
+          <Link
+            to="/clasesSoap"
+            className={`font-medium hover:text-orange-500 transition-colors ${
+              location.pathname === "/clasesSoap"
+                ? "text-orange-500 underline"
+                : ""
+            }`}
+          >
+            Clases SOAP
           </Link>
         </li>
         <li>
@@ -132,6 +142,7 @@ const Header = () => {
             Clases
           </Link>
         </li>
+        
 
         {/* Conditional Rendering */}
         {userData ? (

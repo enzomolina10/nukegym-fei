@@ -28,7 +28,7 @@ function Home() {
           Bienvenidos a <span style={{ color: "#f97809" }}>NukeGym</span>
         </h2>
         <p style={{ marginTop: "10px", fontSize: "18px", opacity: 0.9 }}>
-          Tu lugar para entrenar (FEIIIIIIIIIIII)
+          Tu lugar para entrenar 
         </p>
       </div>
     </div>

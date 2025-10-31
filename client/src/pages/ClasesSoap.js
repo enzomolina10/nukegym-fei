@@ -85,8 +85,8 @@ function ClasesSoap() {
               >
                 <h3 style={{ color: "#f97809", marginBottom: "5px" }}>{c.name}</h3>
                 <p style={{ margin: "5px 0", opacity: 0.9 }}>{c.description}</p>
-                <p style={{ fontSize: "14px", opacity: 0.8 }}>
-                  Cupos disponibles: {c.spots}
+                <p style={{ fontSize: "16x", opacity: 0.8 }}>
+                  Cantidad maxima de personas: {c.spots}
                 </p>
               </div>
             ))}
