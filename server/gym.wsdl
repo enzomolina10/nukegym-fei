@@ -21,7 +21,7 @@
                 <xsd:sequence>
                   <xsd:element name="id" type="xsd:int"/>
                   <xsd:element name="name" type="xsd:string"/>
-                  <xsd:element name="schedule" type="xsd:string"/>
+                  <xsd:element name="description" type="xsd:string"/>
                   <xsd:element name="spots" type="xsd:int"/>
                 </xsd:sequence>
               </xsd:complexType>

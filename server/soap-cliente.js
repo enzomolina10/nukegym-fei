@@ -1,7 +1,7 @@
 // soap-client.js
 import express from "express";
 import soap from "soap";
-import cors from "cors"; // 👈 agregá esta línea
+import cors from "cors"; 
 
 const app = express();
 
